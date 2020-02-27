@@ -1,11 +1,13 @@
 {
   "name": "casting-agency-frontend",
   "version": "0.0.1",
+  "engines": {
+    "node": "13.8.0"
+  },
   "author": "Qichao Hong",
   "homepage": "",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ionic-app-scripts build",
     "test": "ng test",
     "lint": "ionic-app-scripts lint",
