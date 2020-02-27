@@ -14,8 +14,8 @@ export class MoviesFormComponent implements OnInit {
 
   constructor(
     public auth: AuthService,
-    private modalCtrl: ModalController,
-    private moviesService: MoviesService
+    public modalCtrl: ModalController,
+    public moviesService: MoviesService
   ) {}
 
   ngOnInit() {
