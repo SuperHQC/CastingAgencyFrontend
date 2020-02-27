@@ -1,53 +1,37 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { TabsPage } from "./tabs.page";
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: "tabs",
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
-          }
-        ]
+        path: "movies",
+        loadChildren:
+          "../pages/movies-menu/movies-menu.module#MoviesMenuPageModule"
       },
       {
-        path: 'tab2',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
-          }
-        ]
+        path: "user-page",
+        loadChildren: "../pages/user-page/user-page.module#UserPagePageModule"
       },
       {
-        path: 'tab3',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-          }
-        ]
+        path: "actors",
+        loadChildren:
+          "../pages/actors-menu/actors-menu.module#ActorsMenuPageModule"
       },
       {
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
+        path: "",
+        redirectTo: "tabs/user-page",
+        pathMatch: "full"
       }
     ]
   },
   {
-    path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
+    path: "",
+    redirectTo: "tabs/user-page",
+    pathMatch: "full"
   }
 ];
 

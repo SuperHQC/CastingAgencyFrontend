@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar style="text-align: center">
+    <ion-title><b>Movies</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="movies && movies.items">
+  <div style="display: flex; justify-content: center; padding-top: 20px;">
+    <ion-card
+      style="display: flex; flex-direction: column; cursor: pointer; max-width: 150;"
+      *ngFor="let movie of Object.keys(movies.items)"
+      (click)="openForm(movies.items[movie])"
+    >
+      <img src="https://picsum.photos/150?ramdom={{movies.items[movie].id}}" />
+      <ion-card-header>
+        <ion-card-subtitle>Title:</ion-card-subtitle>
+        <ion-card-title style="width: 150px;"
+          >{{movies.items[movie].title}}</ion-card-title
+        >
+      </ion-card-header>
+
+      <ion-card-content>
+        <h6>release: {{movies.items[movie].release}}</h6>
+      </ion-card-content>
+    </ion-card>
+    <ion-card
+      style="opacity: .7; align-items: center; display: flex; flex-direction: column; cursor: pointer; max-width: 150;"
+      *ngIf="auth.can('add:movie')"
+      (click)="openForm()"
+    >
+      <ion-card-header>
+        <ion-card-title>Add Movie</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content style="color:grey; font-size: 256%;">
+        <ion-icon name="add-circle"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
