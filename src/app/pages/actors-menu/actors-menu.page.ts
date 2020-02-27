@@ -12,8 +12,8 @@ import { ActorsFormComponent } from "./actors-form/actors-form.component";
 export class ActorsMenuPage implements OnInit {
   Object = Object;
   constructor(
-    private auth: AuthService,
-    private modalCtrl: ModalController,
+    public auth: AuthService,
+    public modalCtrl: ModalController,
     public actors: ActorsService
   ) {}
 

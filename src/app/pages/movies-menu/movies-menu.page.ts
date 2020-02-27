@@ -12,8 +12,8 @@ import { MoviesFormComponent } from "./movies-form/movies-form.component";
 export class MoviesMenuPage implements OnInit {
   Object = Object;
   constructor(
-    private auth: AuthService,
-    private modalCtrl: ModalController,
+    public auth: AuthService,
+    public modalCtrl: ModalController,
     public movies: MoviesService
   ) {}
 

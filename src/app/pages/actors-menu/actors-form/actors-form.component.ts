@@ -14,8 +14,8 @@ export class ActorsFormComponent implements OnInit {
 
   constructor(
     public auth: AuthService,
-    private modalCtrl: ModalController,
-    private actorsService: ActorsService
+    public modalCtrl: ModalController,
+    public actorsService: ActorsService
   ) {}
 
   ngOnInit() {

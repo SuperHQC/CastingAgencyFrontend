@@ -14,6 +14,7 @@ import { ActorsService } from "./services/actors.service";
 import { MoviesService } from "./services/movies.service";
 
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,6 +22,7 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserModule,
     IonicModule.forRoot(),
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [
