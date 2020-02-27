@@ -6,7 +6,7 @@
 </ion-header>
 
 <ion-content *ngIf="movie">
-  <form (ngSubmit)="logFrom()">
+  <form>
     <ion-item>
       <ion-label>Movie Title: </ion-label>
       <ion-input type="text" [(ngModel)]="movie.title" name="title"></ion-input>

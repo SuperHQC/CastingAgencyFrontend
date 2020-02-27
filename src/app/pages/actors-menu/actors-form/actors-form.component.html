@@ -6,7 +6,7 @@
 </ion-header>
 
 <ion-content *ngIf="actor">
-  <form (ngSubmit)="logFrom()">
+  <form>
     <ion-item>
       <ion-label>Actor Name: </ion-label>
       <ion-input type="text" [(ngModel)]="actor.name" name="name"></ion-input>
